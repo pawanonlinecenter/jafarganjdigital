@@ -1,173 +1,250 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="hi" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saheli - दोस्ती और बातचीत</title>
-<style>
-*{box-sizing:border-box}
-body{
- margin:0;font-family:Arial,sans-serif;
- background:#fff4fa;color:#382538
-}
-header{
- background:linear-gradient(135deg,#9c2875,#ed78ad);
- color:white;text-align:center;padding:28px 12px;
-}
-header h1{margin:0;font-size:32px}
-header p{margin-bottom:0}
-.container{max-width:600px;margin:20px auto;padding:14px}
-.card{
- background:white;padding:20px;margin-bottom:18px;
- border-radius:18px;box-shadow:0 4px 15px #0001
-}
-h2{color:#a52a72;margin-top:0}
-input,textarea,button{
- width:100%;padding:13px;margin:7px 0;
- border-radius:10px;font-size:16px
-}
-input,textarea{border:1px solid #ddc5d6}
-button{
- border:none;background:#b22b7b;color:white;
- font-weight:bold;cursor:pointer
-}
-button.secondary{background:#f5d9eb;color:#84205d}
-.profile{
- background:#fff5fb;border-radius:12px;padding:12px;
- margin:10px 0;border:1px solid #f0d5e6
-}
-#messages{
- background:#fff5fb;border-radius:10px;
- min-height:70px;padding:12px;overflow-wrap:anywhere
-}
-.note{font-size:13px;color:#766675;line-height:1.5}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पवन ऑनलाइन सेंटर & SBI CSP - जाफरगंज, फतेहपुर</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-100 text-slate-800 antialiased">
 
-<header>
-<h1>🌸 Saheli 🌸</h1>
-<p>नई दोस्ती करें, सम्मान से बातचीत करें</p>
-</header>
+    <!-- Top Bar -->
+    <div class="bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 text-white text-xs sm:text-sm py-2.5 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-5 flex-wrap">
+                <span class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt text-amber-400"></i> जाफरगंज, फतेहपुर, उत्तर प्रदेश</span>
+                <span class="flex items-center gap-1.5"><a href="tel:7052724014" class="hover:text-amber-300 transition"><i class="fas fa-phone-alt text-amber-400"></i> +91 7052724014</a></span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20ऑनलाइन%20सेवाओं%20के%20संबंध%20में%20जानकारी%20चाहिए।" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded-full text-xs font-semibold transition flex items-center gap-1.5 shadow-sm">
+                    <i class="fab fa-whatsapp text-sm"></i> WhatsApp चैट
+                </a>
+                <a href="https://instagram.com/csp__jafarganj" target="_blank" class="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:opacity-90 text-white px-3 py-1 rounded-full text-xs font-semibold transition flex items-center gap-1.5 shadow-sm">
+                    <i class="fab fa-instagram text-sm"></i> @csp__jafarganj
+                </a>
+            </div>
+        </div>
+    </div>
 
-<div class="container">
+    <!-- Sticky Header with Owner Photo -->
+    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-40 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Owner Photo Frame in Header -->
+                <div class="relative">
+                    <img src="236086.jpg" alt="पवन कुमार - संचालक" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-amber-500 shadow-md">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full"></span>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-2xl font-extrabold text-blue-950 tracking-tight leading-none">पवन ऑनलाइन सेंटर</h1>
+                    <p class="text-[11px] sm:text-xs text-blue-600 font-semibold tracking-wide mt-1">CSC & SBI CSP DIGITAL SERVICE HUB</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/917052724014" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white p-2.5 rounded-xl shadow transition sm:hidden">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+                <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs sm:text-sm shadow-md transition duration-200 hidden sm:inline-flex items-center gap-2">
+                    <i class="fas fa-th-large"></i> सभी सेवाएँ देखें
+                </a>
+            </div>
+        </div>
+    </header>
 
-<div class="card">
-<h2>🌷 महिला रजिस्ट्रेशन</h2>
-<form id="registerForm">
-<input id="name" placeholder="आपका नाम या स्क्रीन नाम" required>
-<input id="age" type="number" min="18" placeholder="उम्र (18+)" required>
-<input id="phone" type="tel" placeholder="मोबाइल नंबर" required>
-<input id="password" type="password" minlength="8"
-placeholder="पासवर्ड (कम से कम 8 अक्षर)" required>
-<label>
-<input id="female" type="checkbox" required style="width:auto">
-मैं महिला हूँ और मेरी उम्र 18 वर्ष या अधिक है।
-</label>
-<button type="submit">रजिस्टर करें</button>
-</form>
-<p id="registerStatus" role="status"></p>
-<p class="note">यह डेमो है। चेकबॉक्स से पहचान सत्यापित नहीं होती। असली अकाउंट के लिए सुरक्षित सर्वर और सत्यापन आवश्यक हैं।</p>
-</div>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 text-white py-16 sm:py-20 px-4 overflow-hidden">
+        <!-- Decorative background glow -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <!-- Owner Avatar Highlight in Hero -->
+            <div class="mb-6 flex justify-center">
+                <div class="p-1 bg-gradient-to-tr from-amber-400 to-amber-200 rounded-full shadow-lg inline-block">
+                    <img src="236086.jpg" alt="पवन कुमार" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-blue-950 shadow-inner">
+                </div>
+            </div>
 
-<div class="card">
-<h2>🔐 लॉगिन</h2>
-<form id="loginForm">
-<input id="loginPhone" placeholder="मोबाइल नंबर" required>
-<input id="loginPassword" type="password" placeholder="पासवर्ड" required>
-<button type="submit">लॉगिन</button>
-</form>
-<p id="loginStatus" role="status"></p>
-</div>
+            <span class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 shadow-sm">
+                <i class="fas fa-user-shield"></i> संचालक: पवन कुमार (जाफरगंज)
+            </span>
+            
+            <h2 class="text-3xl sm:text-6xl font-extrabold mt-2 mb-6 leading-tight tracking-tight">
+                सरकारी योजनाएं, बैंकिंग और CSC सेवाएं <br class="hidden sm:inline"><span class="text-amber-400">एक ही छत के नीचे</span>
+            </h2>
+            <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-light">
+                सोलर पैनल सब्सिडी (₹1.08 लाख), आईटीआर फाइलिंग, लोन, बीमा और सभी प्रकार की डिजिटल सेवाओं के लिए आज ही संपर्क करें।
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fas fa-concierge-bell"></i> सेवाएँ चुनें और आवेदन करें
+                </a>
+                <a href="https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20सीएससी%20के%20काम%20के%20लिए%20संपर्क%20करना%20है" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-2 border border-emerald-500">
+                    <i class="fab fa-whatsapp text-xl"></i> सीएससी कार्य हेतु WhatsApp संपर्क करें
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<h2>💗 दोस्त खोजें</h2>
-<div class="profile">
-<strong>🌼 गुलाब</strong>
-<p>दोस्ती, किताबें और संगीत</p>
-<button class="secondary" onclick="openChat('गुलाब')">चैट करें</button>
-</div>
-<div class="profile">
-<strong>🦋 चाँदनी</strong>
-<p>पढ़ाई और फिल्में</p>
-<button class="secondary" onclick="openChat('चाँदनी')">चैट करें</button>
-</div>
-<p class="note">ये केवल नमूना प्रोफाइल हैं, असली यूज़र नहीं।</p>
-</div>
+    <!-- CSC Announcement Ticker Bar -->
+    <div class="bg-amber-400 text-slate-950 py-3 px-4 shadow-md font-semibold text-xs sm:text-sm flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+        <div class="flex items-center gap-2">
+            <i class="fas fa-bullhorn text-blue-950 animate-bounce"></i>
+            <span><strong>सोलर पैनल योजना</strong> के तहत ₹1,08,000 सब्सिडी हेतु ऑनलाइन आवेदन शुरू है!</span>
+        </div>
+        <a href="javascript:void(0);" onclick="openSolarModal()" class="bg-slate-950 text-amber-400 text-xs px-3.5 py-1.5 rounded-full hover:bg-blue-900 hover:text-white transition shadow-sm font-bold">
+            <i class="fas fa-solar-panel mr-1"></i> फॉर्म भरें
+        </a>
+    </div>
 
-<div class="card">
-<h2>💬 चैट</h2>
-<p id="chatTitle">बात करने के लिए प्रोफाइल चुनें।</p>
-<div id="messages">यहाँ डेमो संदेश दिखेंगे।</div>
-<textarea id="message" placeholder="अपना मैसेज लिखें"></textarea>
-<button onclick="sendMessage()">मैसेज भेजें</button>
-<button class="secondary" onclick="callDemo()">📞 ऑडियो कॉल</button>
-<button class="secondary" onclick="callDemo()">🎥 वीडियो कॉल</button>
-<p class="note">मैसेज और कॉल अभी असली इंटरनेट पर नहीं भेजे जाते।</p>
-</div>
+    <!-- Trust Stats Bar -->
+    <div class="bg-white border-b border-slate-200 py-6 px-4 shadow-sm">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-2 border-r last:border-r-0 border-slate-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-blue-900">₹1.08 Lakh</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">सोलर पैनल सब्सिडी</div>
+            </div>
+            <div class="p-2 border-r last:border-r-0 border-slate-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-amber-600">सभी लोन</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">वाहन, पर्सनल और बिजनेस</div>
+            </div>
+            <div class="p-2 border-r last:border-r-0 border-slate-100">
+                <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600">आईटीआर फाइलिंग</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">त्वरित एवं सटीक रिटर्न</div>
+            </div>
+            <div class="p-2">
+                <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600">बीमा सेवाएँ</div>
+                <div class="text-xs sm:text-sm text-slate-500 font-medium mt-1">LIC, SBI & IndiaFirst</div>
+            </div>
+        </div>
+    </div>
 
-<div class="card">
-<h2>🛡️ सुरक्षा</h2>
-<p>असली वेबसाइट में ब्लॉक, रिपोर्ट, गोपनीयता सेटिंग और पहचान सत्यापन जोड़ना जरूरी है।</p>
-</div>
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">हमारी प्रमुख CSC डिजिटल सेवाएँ</h3>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base font-normal">किसी भी सर्विस पर क्लिक करें—पूर्ण विवरण देखें या सीधे आवेदन फॉर्म भरें</p>
+            <div class="w-24 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+        </div>
 
-</div>
+        <!-- Grid of Services -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- 1. Solar Panel with Form (SPECIAL HIGHLIGHT) -->
+            <div onclick="openSolarModal()" class="bg-gradient-to-br from-amber-50 via-white to-orange-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-orange-500 group transform hover:-translate-y-1 relative overflow-hidden">
+                <span class="absolute top-3 right-3 bg-orange-500 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">₹1.08L SUBSIDY</span>
+                <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition shadow-md">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">सोलर पैनल योजना (फॉर्म भरें)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">लाइट बिल, आधार, पैन और फोटो अपलोड करके आवेदन करें।</p>
+                <div class="mt-4 flex items-center text-orange-700 text-xs font-bold gap-1">
+                    <span>फॉर्म खोलें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
-<script>
-let currentFriend = "";
+            <!-- 2. ITR Filing -->
+            <div onclick="openServiceModal('आईटीआर फाइलिंग (Income Tax Return - ITR)', '• विवरण: वेतनभोगी, व्यापारी, और अन्य स्रोतों से आय वाले नागरिकों के लिए इनकम टैक्स रिटर्न (ITR) फाइलिंग की सुविधा।\n• आवश्यक कागजात: पैन कार्ड, आधार कार्ड, बैंक स्टेटमेंट, फॉर्म 16।', 'https://www.incometax.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-sky-600 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">आईटीआर फाइलिंग (ITR)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">इनकम टैक्स रिटर्न फाइलिंग और रिफंड संबंधित सहायता।</p>
+                <div class="mt-4 flex items-center text-sky-600 text-xs font-bold gap-1">
+                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
-document.getElementById("registerForm").addEventListener("submit", function(e) {
- e.preventDefault();
+            <!-- 3. All Types of Loans -->
+            <div onclick="openServiceModal('सभी प्रकार के लोन (Vehicle, Personal & Business Loan)', '• विवरण: गाड़ी लोन (Vehicle/Car/Bike Loan), पर्सनल लोन, होम लोन, और बिजनेस लोन के लिए आसान आवेदन प्रक्रिया।\n• विशेषताएं: न्यूनतम कागजी कार्रवाई और त्वरित लोन अनुमोदन।', 'https://www.sbi.co.in/web/personal-banking/loans')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">सभी प्रकार के लोन</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">गाड़ी लोन, पर्सनल लोन और बिजनेस लोन के लिए आवेदन।</p>
+                <div class="mt-4 flex items-center text-emerald-600 text-xs font-bold gap-1">
+                    <span>लोन की जानकारी</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
- const age = Number(document.getElementById("age").value);
+            <!-- 4. Life Insurance -->
+            <div onclick="openServiceModal('बीमा सेवाएँ (LIC, SBI Life & IndiaFirst Insurance)', '• विवरण: सुरक्षित भविष्य और परिवार की आर्थिक सुरक्षा के लिए जीवन बीमा पॉलिसियां।\n• उपलब्ध ब्रांड्स: LIC, SBI Life Insurance और IndiaFirst Life Insurance।', 'https://www.sbilife.co.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-rose-600 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">बीमा सेवाएँ (LIC / SBI / IndiaFirst)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">LIC, SBI Life और IndiaFirst बीमा पॉलिसियां व प्रीमियम भुगतान।</p>
+                <div class="mt-4 flex items-center text-rose-600 text-xs font-bold gap-1">
+                    <span>बीमा विवरण</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
- if (age < 18) {
-  document.getElementById("registerStatus").textContent =
-   "यह वेबसाइट केवल 18 वर्ष या अधिक उम्र के वयस्कों के लिए है।";
-  return;
- }
+            <!-- 5. Atal Pension Yojana -->
+            <div onclick="openServiceModal('अटल पेंशन योजना (Atal Pension Yojana - APY)', '• पात्रता: 18 से 40 वर्ष की आयु के सभी बैंक खाताधारक नागरिक।\n• पेंशन लाभ: 60 वर्ष की आयु के बाद जीवनभर प्रति माह ₹1,000 से ₹5,000 तक की गारंटीड पेंशन।', 'https://www.npscra.nsdl.co.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-piggy-bank"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">अटल पेंशन योजना (APY)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">बुढ़ापे के लिए सुरक्षित पेंशन और परिवार के लिए वित्तीय लाभ।</p>
+                <div class="mt-4 flex items-center text-indigo-600 text-xs font-bold gap-1">
+                    <span>पूरी जानकारी</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
- document.getElementById("registerStatus").textContent =
-  "डेमो रजिस्ट्रेशन पूरा हुआ। असली अकाउंट नहीं बना है।";
-});
+            <!-- 6. PVC Card Home Delivery -->
+            <div onclick="openServiceModal('PVC कार्ड होम डिलीवरी (Home Delivery)', 'अपने पैन कार्ड, आधार या अन्य आईडी कार्ड को हाई-क्वालिटी PVC फॉर्मेट में प्रिंट करवाकर सीधे अपने घर पर मंगवाएं।', 'https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20PVC%20कार्ड%20घर%20मंगवाने%20के%20लिए%20आर्डर%20देना%20है')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-id-card-alt"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">PVC कार्ड होम डिलीवरी</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">पैन कार्ड और आईडी कार्ड आर्डर करके सीधे घर मंगाएं।</p>
+                <div class="mt-4 flex items-center text-amber-600 text-xs font-bold gap-1">
+                    <span>आर्डर करें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
-document.getElementById("loginForm").addEventListener("submit", function(e) {
- e.preventDefault();
- document.getElementById("loginStatus").textContent =
-  "यह केवल लॉगिन डेमो है। असली अकाउंट के लिए सर्वर जरूरी है।";
-});
+            <!-- 7. आय, जाति, निवास -->
+            <div onclick="openServiceModal('आय, जाति और निवास प्रमाण पत्र', 'नया आय, जाति या निवास प्रमाण पत्र तुरंत ऑनलाइन आवेदन किया जाता है।', 'https://edistrict.up.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-id-badge"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">आय, जाति, निवास</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">प्रमाण पत्र ऑनलाइन आवेदन और त्वरित डाउनलोड सुविधा।</p>
+                <div class="mt-4 flex items-center text-blue-600 text-xs font-bold gap-1">
+                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
-function openChat(name) {
- currentFriend = name;
- document.getElementById("chatTitle").textContent =
-  name + " के साथ डेमो चैट";
- document.getElementById("messages").textContent =
-  "नमस्ते! यह नमूना बातचीत है।";
-}
+            <!-- 8. खतौनी नकल -->
+            <div onclick="openServiceModal('खतौनी नकल (Land Records)', 'अपनी जमीन या खेत की खतौनी नकल ऑनलाइन निकलवाएं।', 'https://upbhulekh.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition shadow-sm">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">खतौनी नकल</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">खेत/जमीन की खतौनी नकल ऑनलाइन तुरंत निकलवाएं।</p>
+                <div class="mt-4 flex items-center text-teal-600 text-xs font-bold gap-1">
+                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
 
-function sendMessage() {
- if (!currentFriend) {
-  alert("पहले कोई प्रोफाइल चुनें।");
-  return;
- }
+        </div>
+    </section>
 
- const field = document.getElementById("message");
- const msg = field.value.trim();
-
- if (!msg) {
-  alert("पहले मैसेज लिखें।");
-  return;
- }
-
- document.getElementById("messages").textContent =
-  "आप: " + msg + " (डेमो संदेश)";
- field.value = "";
-}
-
-function callDemo() {
- alert("असली ऑडियो/वीडियो कॉल चालू करने के लिए सर्वर और कॉलिंग सेवा जोड़नी होगी।");
-}
-</script>
-
-</body>
-</html>
+    <!-- Solar Panel Application Form Modal (NEW) -->
+    <div id="solarModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl transform transition-all border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                <h3 class="text-xl font-extrabold text-blue-950"><i class="fas fa-solar-panel text-orange-500 mr-2"></i> सोलर पैनल योजना आवेदन फॉर्म</h3>
+                <button onclick="closeSolarModal()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 hover:text-slate-900 font-bold transition">&times;</button>
+            </div>
+            
+            <form id="solarForm" onsubmit="submitSolarForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">पूरा नाम (आधार कार्ड के अनुसार)</lab
